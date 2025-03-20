@@ -1,4 +1,4 @@
-# Vancouver Real Estate Analytics Platform 2025
+# Vancouver Real Estate Analytics Platform 
 
 A comprehensive real estate analytics platform for Vancouver housing market, built with Django.
 
