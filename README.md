@@ -1,37 +1,60 @@
-SPIDER
-对于温哥华房产数据，我们可以选择几个主要的房产网站来爬取：
-Realtor.ca (加拿大最大的房产网站)
-REW.ca (温哥华地区专业房产网站)
-3. Zillow.com (也覆盖温哥华地区)
+# Vancouver Real Estate Analytics Platform 2025
 
-django
+A comprehensive real estate analytics platform for Vancouver housing market, built with Django.
 
-模型结构:
-BaseModel - 基础模型类，提供了通用的CRUD操作方法
-config - 配置表模型
-users - 管理员表模型
-yonghu - 用户表模型
-xinfangxinxi - 房价数据模型
-systemintro - 系统介绍模型
-2. 视图结构:
-config_v.py - 配置相关视图
-users_v.py - 管理员相关视图
-schema_v.py - 数据库模式相关视图
-Yonghu_v.py - 用户相关视图
-Xinfangxinxi_v.py - 房价数据相关视图
-Systemintro_v.py - 系统介绍相关视图
-3. 主要功能:
-用户认证和权限管理
-数据的CRUD操作
-文件上传下载
-Excel导入导出
-数据统计和分析
-邮件发送
-爬虫集成
-4. 特点:
-使用了Django的ORM系统
-实现了基于类的视图
-提供了RESTful风格的API
-支持多种数据格式(JSON、Excel等)
-集成了Hadoop/Spark功能
+## Overview
 
+This platform provides real-time analytics, market trends, and detailed property information for the Vancouver real estate market. It includes features such as property listing management, market statistics, and automated data collection.
+
+## Features
+
+- **Property Management**
+  - Real-time property listings
+  - Detailed property information
+  - Advanced search and filtering
+  - Property view tracking
+
+- **Market Analytics**
+  - Market trend analysis
+  - Neighborhood statistics
+  - Price predictions
+  - Interactive data visualization
+
+- **User System**
+  - User authentication
+  - Role-based access control
+  - User activity tracking
+  - Customizable user preferences
+
+- **Data Collection**
+  - Automated web scraping from:
+    - Realtor.ca
+    - REW.ca
+    - Zillow.com
+  - Data validation
+  - Regular updates
+  - Historical data tracking
+
+## Tech Stack
+
+- **Backend**: Django 3.x
+- **Database**: MySQL
+- **Cache**: Redis
+- **Task Queue**: Celery
+- **Web Scraping**: Scrapy
+- **API**: RESTful
+
+## Project Structure
+
+Django/
+├── main/                   # Main application
+│   ├── models.py          # Database models (VancouverHouse, MarketStats, etc.)
+│   ├── vancouver_house_v.py # Property views
+│   ├── market_stats_v.py  # Market statistics views
+│   ├── system_info_v.py   # System information views
+│   ├── users_v.py         # User management views
+│   ├── urls.py            # URL configurations
+│   └── utils/             # Utility functions
+├── spider/                # Web scraping components
+├── templates/             # HTML templates
+└── static/               # Static files
